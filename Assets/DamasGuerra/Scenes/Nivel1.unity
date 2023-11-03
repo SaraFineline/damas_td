@@ -14218,9 +14218,9 @@ MonoBehaviour:
   PathElements:
   - PathElementPosition: {x: -50.926872, y: 14.152796, z: 0}
     Delay: 0
-  - PathElementPosition: {x: -16.064106, y: 14.375798, z: 0}
+  - PathElementPosition: {x: -17.651043, y: 14.097562, z: 0}
     Delay: 0
-  - PathElementPosition: {x: -16.037071, y: -4.319274, z: 0}
+  - PathElementPosition: {x: -17.63776, y: -4.504765, z: 0}
     Delay: 0
   - PathElementPosition: {x: 4.1750946, y: -4.43528, z: 0}
     Delay: 0
