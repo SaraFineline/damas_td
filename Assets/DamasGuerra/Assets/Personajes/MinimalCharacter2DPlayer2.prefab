@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 3639385128826275230}
   - component: {fileID: 8424750597796109409}
   - component: {fileID: 8644263878987523611}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: MinimalCharacter2DPlayer2
   m_TagString: Player
   m_Icon: {fileID: 0}
