@@ -9829,7 +9829,7 @@ GameObject:
   - component: {fileID: 588554876474243453}
   - component: {fileID: -4478739861142863545}
   - component: {fileID: -5823332924561573210}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Koala
   m_TagString: Player
   m_Icon: {fileID: 0}
