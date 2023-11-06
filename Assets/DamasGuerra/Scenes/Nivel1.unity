@@ -3279,7 +3279,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114277323309942634, guid: 7d9788e82d6befd44bbf3adef8ced523,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -3315,7 +3316,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -3340,8 +3341,8 @@ MonoBehaviour:
   Label: 
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
-  FaceTarget: 1
-  AimAtTarget: 0
+  FaceTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &349764767
 MonoBehaviour:
@@ -3370,7 +3371,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 349764767}
+    Transitions:
+      array:
+      - Decision: {fileID: 349764765}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 349764766}
+    Transitions:
+      array:
+      - Decision: {fileID: 349764765}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -3592,7 +3611,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  FacingMode: 0
+  FacingMode: 2
   FacingBase: 0
   ModelShouldFlip: 0
   ModelFlipValueLeft: {x: -1, y: 1, z: 1}
@@ -3601,7 +3620,7 @@ MonoBehaviour:
   ModelRotationValueLeft: {x: 0, y: 180, z: 0}
   ModelRotationValueRight: {x: 0, y: 0, z: 0}
   ModelRotationSpeed: 0
-  InitialFacingDirection: 1
+  InitialFacingDirection: 0
   AbsoluteThresholdMovement: 0.5
   AbsoluteThresholdWeapon: 0.5
   CurrentFacingDirection: 1
@@ -6104,7 +6123,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114277323309942634, guid: 7d9788e82d6befd44bbf3adef8ced523,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -6140,7 +6160,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -6165,8 +6185,8 @@ MonoBehaviour:
   Label: 
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
-  FaceTarget: 1
-  AimAtTarget: 0
+  FaceTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &592606012
 MonoBehaviour:
@@ -6195,7 +6215,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 592606012}
+    Transitions:
+      array:
+      - Decision: {fileID: 592606010}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 592606011}
+    Transitions:
+      array:
+      - Decision: {fileID: 592606010}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -6417,7 +6455,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  FacingMode: 0
+  FacingMode: 2
   FacingBase: 0
   ModelShouldFlip: 0
   ModelFlipValueLeft: {x: -1, y: 1, z: 1}
@@ -6426,7 +6464,7 @@ MonoBehaviour:
   ModelRotationValueLeft: {x: 0, y: 180, z: 0}
   ModelRotationValueRight: {x: 0, y: 0, z: 0}
   ModelRotationSpeed: 0
-  InitialFacingDirection: 1
+  InitialFacingDirection: 0
   AbsoluteThresholdMovement: 0.5
   AbsoluteThresholdWeapon: 0.5
   CurrentFacingDirection: 1
@@ -16546,8 +16584,8 @@ MonoBehaviour:
   Label: 
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
-  FaceTarget: 1
-  AimAtTarget: 0
+  FaceTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &1668642437
 MonoBehaviour:
@@ -16816,7 +16854,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  FacingMode: 0
+  FacingMode: 2
   FacingBase: 0
   ModelShouldFlip: 0
   ModelFlipValueLeft: {x: -1, y: 1, z: 1}
@@ -16825,7 +16863,7 @@ MonoBehaviour:
   ModelRotationValueLeft: {x: 0, y: 180, z: 0}
   ModelRotationValueRight: {x: 0, y: 0, z: 0}
   ModelRotationSpeed: 0
-  InitialFacingDirection: 1
+  InitialFacingDirection: 0
   AbsoluteThresholdMovement: 0.5
   AbsoluteThresholdWeapon: 0.5
   CurrentFacingDirection: 1
@@ -17683,7 +17721,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114277323309942634, guid: 7d9788e82d6befd44bbf3adef8ced523,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -17719,7 +17758,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -17744,8 +17783,8 @@ MonoBehaviour:
   Label: 
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
-  FaceTarget: 1
-  AimAtTarget: 0
+  FaceTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &1785766221
 MonoBehaviour:
@@ -17774,7 +17813,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 1785766221}
+    Transitions:
+      array:
+      - Decision: {fileID: 1785766219}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 1785766221}
+    Transitions:
+      array:
+      - Decision: {fileID: 1785766219}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -17996,7 +18053,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  FacingMode: 0
+  FacingMode: 2
   FacingBase: 0
   ModelShouldFlip: 0
   ModelFlipValueLeft: {x: -1, y: 1, z: 1}
@@ -18005,7 +18062,7 @@ MonoBehaviour:
   ModelRotationValueLeft: {x: 0, y: 180, z: 0}
   ModelRotationValueRight: {x: 0, y: 0, z: 0}
   ModelRotationSpeed: 0
-  InitialFacingDirection: 1
+  InitialFacingDirection: 0
   AbsoluteThresholdMovement: 0.5
   AbsoluteThresholdWeapon: 0.5
   CurrentFacingDirection: 1
@@ -45023,7 +45080,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -45048,8 +45105,8 @@ MonoBehaviour:
   Label: 
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
-  FaceTarget: 1
-  AimAtTarget: 0
+  FaceTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &2064822394
 MonoBehaviour:
@@ -45078,7 +45135,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 2064822394}
+    Transitions:
+      array:
+      - Decision: {fileID: 2064822392}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 2064822393}
+    Transitions:
+      array:
+      - Decision: {fileID: 2064822392}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -45300,7 +45375,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  FacingMode: 0
+  FacingMode: 2
   FacingBase: 0
   ModelShouldFlip: 0
   ModelFlipValueLeft: {x: -1, y: 1, z: 1}
@@ -45309,7 +45384,7 @@ MonoBehaviour:
   ModelRotationValueLeft: {x: 0, y: 180, z: 0}
   ModelRotationValueRight: {x: 0, y: 0, z: 0}
   ModelRotationSpeed: 0
-  InitialFacingDirection: 1
+  InitialFacingDirection: 0
   AbsoluteThresholdMovement: 0.5
   AbsoluteThresholdWeapon: 0.5
   CurrentFacingDirection: 1
@@ -45890,7 +45965,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114277323309942634, guid: 7d9788e82d6befd44bbf3adef8ced523,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -45951,8 +46027,8 @@ MonoBehaviour:
   Label: 
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
-  FaceTarget: 1
-  AimAtTarget: 0
+  FaceTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &2134578869
 MonoBehaviour:
@@ -45981,7 +46057,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 2134578869}
+    Transitions:
+      array:
+      - Decision: {fileID: 2134578867}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 2134578868}
+    Transitions:
+      array:
+      - Decision: {fileID: 2134578867}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
