@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4539632890920534}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: WeaponAttachment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: -6640507840419259694}
   - component: {fileID: -2219075074335143349}
   - component: {fileID: -4272267868769410874}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: MinimalCharacter2DPlayer1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4417269262889042}
   - component: {fileID: 212503738640729348}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: MinimalCharacterModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
