@@ -334,13 +334,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-  - tiempoSalida: 60
+  - tiempoSalida: 30
     cantidad: 4
     prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
     ruta: {fileID: 906557911}
   - tiempoSalida: 60
     cantidad: 2
-    prefab: {fileID: 1561694053617324, guid: 89e8fe862f5cce84198ece4736c332ef, type: 3}
+    prefab: {fileID: 1790328835693532, guid: 7c5dd6df2564cc3429545538ad01ac89, type: 3}
     ruta: {fileID: 906557911}
   tiempo_entre_olas: 30
   PuedeAgregarButton: 0
@@ -1124,61 +1124,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa1dfffc7986846468341a9dff7b5c15, type: 3}
---- !u!1 &70594720
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 70594721}
-  - component: {fileID: 70594722}
-  m_Layer: 0
-  m_Name: Ola6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &70594721
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70594720}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 645595139}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &70594722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70594720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6937778ea1a0b6c4e9a69c15635c0dc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-  - tiempoSalida: 150
-    cantidad: 2
-    prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
-    ruta: {fileID: 906557911}
-  - tiempoSalida: 150
-    cantidad: 5
-    prefab: {fileID: 1561694053617324, guid: 89e8fe862f5cce84198ece4736c332ef, type: 3}
-    ruta: {fileID: 906557911}
-  tiempo_entre_olas: 30
-  PuedeAgregarButton: 0
 --- !u!1 &71771401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,7 +2014,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 645595139}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &163003720
 GameObject:
@@ -6018,8 +5963,6 @@ Transform:
   - {fileID: 44768605}
   - {fileID: 1884280582}
   - {fileID: 851881650}
-  - {fileID: 70594721}
-  - {fileID: 1082540547}
   - {fileID: 157906009}
   m_Father: {fileID: 71771402}
   m_RootOrder: 0
@@ -6042,8 +5985,6 @@ MonoBehaviour:
   - {fileID: 44768606}
   - {fileID: 1884280583}
   - {fileID: 851881651}
-  - {fileID: 70594722}
-  - {fileID: 1082540548}
   contenedor_grupos: {fileID: 157906008}
 --- !u!1001 &646377211
 PrefabInstance:
@@ -6387,10 +6328,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - tiempoSalida: 0
-    cantidad: 8
+    cantidad: 4
     prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
     ruta: {fileID: 906557911}
-  tiempo_entre_olas: 30
+  tiempo_entre_olas: 0
   PuedeAgregarButton: 0
 --- !u!4 &683278360 stripped
 Transform:
@@ -7459,15 +7400,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-  - tiempoSalida: 30
-    cantidad: 10
+  - tiempoSalida: 20
+    cantidad: 5
     prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
     ruta: {fileID: 906557911}
-  - tiempoSalida: 30
+  - tiempoSalida: 20
     cantidad: 1
-    prefab: {fileID: 1561694053617324, guid: 89e8fe862f5cce84198ece4736c332ef, type: 3}
+    prefab: {fileID: 1790328835693532, guid: 7c5dd6df2564cc3429545538ad01ac89, type: 3}
     ruta: {fileID: 906557911}
-  tiempo_entre_olas: 30
+  tiempo_entre_olas: 0
   PuedeAgregarButton: 0
 --- !u!1001 &806779425
 PrefabInstance:
@@ -7915,15 +7856,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-  - tiempoSalida: 120
+  - tiempoSalida: 60
     cantidad: 4
+    prefab: {fileID: 1790328835693532, guid: 7c5dd6df2564cc3429545538ad01ac89, type: 3}
+    ruta: {fileID: 906557911}
+  - tiempoSalida: 60
+    cantidad: 3
     prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
     ruta: {fileID: 906557911}
-  - tiempoSalida: 120
-    cantidad: 3
-    prefab: {fileID: 1561694053617324, guid: 89e8fe862f5cce84198ece4736c332ef, type: 3}
-    ruta: {fileID: 906557911}
-  tiempo_entre_olas: 30
+  tiempo_entre_olas: 0
   PuedeAgregarButton: 0
 --- !u!4 &854396822 stripped
 Transform:
@@ -8374,7 +8315,7 @@ MonoBehaviour:
     Delay: 0
   - PathElementPosition: {x: 71.99115, y: -4.3733997, z: 0}
     Delay: 0
-  - PathElementPosition: {x: 72.28334, y: -48.18173, z: 0}
+  - PathElementPosition: {x: 72.868195, y: -71.380684, z: 0}
     Delay: 0
   ReferenceMMPath: {fileID: 0}
   AbsoluteReferencePath: 0
@@ -9729,61 +9670,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1082330776}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1082540546
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1082540547}
-  - component: {fileID: 1082540548}
-  m_Layer: 0
-  m_Name: Ola7
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1082540547
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082540546}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 645595139}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1082540548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082540546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6937778ea1a0b6c4e9a69c15635c0dc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-  - tiempoSalida: 150
-    cantidad: 1
-    prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
-    ruta: {fileID: 0}
-  - tiempoSalida: 150
-    cantidad: 4
-    prefab: {fileID: 1561694053617324, guid: 89e8fe862f5cce84198ece4736c332ef, type: 3}
-    ruta: {fileID: 0}
-  tiempo_entre_olas: 30
-  PuedeAgregarButton: 0
 --- !u!1001 &1085224899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40759,13 +40645,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-  - tiempoSalida: 90
+  - tiempoSalida: 40
     cantidad: 3
     prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
     ruta: {fileID: 906557911}
   - tiempoSalida: 90
-    cantidad: 5
-    prefab: {fileID: 1561694053617324, guid: 89e8fe862f5cce84198ece4736c332ef, type: 3}
+    cantidad: 4
+    prefab: {fileID: 1790328835693532, guid: 7c5dd6df2564cc3429545538ad01ac89, type: 3}
     ruta: {fileID: 906557911}
   tiempo_entre_olas: 30
   PuedeAgregarButton: 0
