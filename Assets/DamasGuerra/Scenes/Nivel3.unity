@@ -10660,8 +10660,8 @@ MonoBehaviour:
   Label: 
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
-  FaceTarget: 1
-  AimAtTarget: 0
+  FaceTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &1233460130
 MonoBehaviour:
