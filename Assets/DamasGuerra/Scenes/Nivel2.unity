@@ -605,7 +605,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114317679573123918, guid: 41c4b1b5cf3c187459806b6e03ca36ac,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -641,7 +642,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -667,7 +668,7 @@ MonoBehaviour:
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
   FaceTarget: 1
-  AimAtTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &51113961
 MonoBehaviour:
@@ -696,7 +697,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 51113961}
+    Transitions:
+      array:
+      - Decision: {fileID: 51113959}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 51113960}
+    Transitions:
+      array:
+      - Decision: {fileID: 51113959}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -726,7 +745,7 @@ MonoBehaviour:
   InitialHealth: 10
   MaximumHealth: 100
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 0
+  ImmuneToDamage: 1
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
@@ -1189,14 +1208,14 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 645595139}
+  - {fileID: 949046212}
   - {fileID: 906557910}
   - {fileID: 2131479019}
   - {fileID: 1353583435}
   - {fileID: 131539986}
   - {fileID: 653003447}
   - {fileID: 1475545979}
-  - {fileID: 1550324085}
-  - {fileID: 949046212}
+  - {fileID: 1405825176}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1774,7 +1793,7 @@ Transform:
   - {fileID: 1667698493}
   - {fileID: 2112456358}
   m_Father: {fileID: 71771402}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &132738408
 PrefabInstance:
@@ -2420,7 +2439,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114317679573123918, guid: 41c4b1b5cf3c187459806b6e03ca36ac,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -2456,7 +2476,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -2482,7 +2502,7 @@ MonoBehaviour:
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
   FaceTarget: 1
-  AimAtTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &212271976
 MonoBehaviour:
@@ -2511,7 +2531,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 212271976}
+    Transitions:
+      array:
+      - Decision: {fileID: 212271974}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 212271975}
+    Transitions:
+      array:
+      - Decision: {fileID: 212271974}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -2541,7 +2579,7 @@ MonoBehaviour:
   InitialHealth: 10
   MaximumHealth: 100
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 0
+  ImmuneToDamage: 1
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
@@ -6156,7 +6194,7 @@ Transform:
   - {fileID: 180599777}
   - {fileID: 1707925313}
   m_Father: {fileID: 71771402}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &662289205 stripped
 Transform:
@@ -6855,6 +6893,16 @@ PrefabInstance:
     - target: {fileID: 4417269262889042, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114871673569860628, guid: 8336cc0cf1b7b654990d47bf6c37779d,
+        type: 3}
+      propertyPath: InitialHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114871673569860628, guid: 8336cc0cf1b7b654990d47bf6c37779d,
+        type: 3}
+      propertyPath: MaximumHealth
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
@@ -8291,7 +8339,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 71771402}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &906557911
 MonoBehaviour:
@@ -8774,7 +8822,7 @@ Transform:
   - {fileID: 1675468492}
   - {fileID: 1881152520}
   m_Father: {fileID: 71771402}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &949440255
 PrefabInstance:
@@ -9976,7 +10024,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114317679573123918, guid: 41c4b1b5cf3c187459806b6e03ca36ac,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -10012,7 +10061,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -10038,7 +10087,7 @@ MonoBehaviour:
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
   FaceTarget: 1
-  AimAtTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &1111460963
 MonoBehaviour:
@@ -10067,7 +10116,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 1111460963}
+    Transitions:
+      array:
+      - Decision: {fileID: 1111460961}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 1111460962}
+    Transitions:
+      array:
+      - Decision: {fileID: 1111460961}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -10097,7 +10164,7 @@ MonoBehaviour:
   InitialHealth: 10
   MaximumHealth: 100
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 0
+  ImmuneToDamage: 1
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
@@ -11668,7 +11735,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114317679573123918, guid: 41c4b1b5cf3c187459806b6e03ca36ac,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -11704,7 +11772,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -11730,7 +11798,7 @@ MonoBehaviour:
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
   FaceTarget: 1
-  AimAtTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &1267305407
 MonoBehaviour:
@@ -11759,7 +11827,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 1267305407}
+    Transitions:
+      array:
+      - Decision: {fileID: 1267305405}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 1267305406}
+    Transitions:
+      array:
+      - Decision: {fileID: 1267305405}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -11789,7 +11875,7 @@ MonoBehaviour:
   InitialHealth: 10
   MaximumHealth: 100
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 0
+  ImmuneToDamage: 1
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
@@ -13475,7 +13561,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 71771402}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1353583436
 TilemapRenderer:
@@ -36801,11 +36887,11 @@ Transform:
   m_GameObject: {fileID: 1405825174}
   m_LocalRotation: {x: -0, y: -0, z: 0.010830858, w: 0.99994135}
   m_LocalPosition: {x: 38.4, y: -22.06, z: 0}
-  m_LocalScale: {x: 2.2751, y: 2.1001003, z: 1}
+  m_LocalScale: {x: 2.2751, y: 2.1001005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1550324085}
-  m_RootOrder: 0
+  m_Father: {fileID: 71771402}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.241}
 --- !u!1001 &1420228482
 PrefabInstance:
@@ -37109,7 +37195,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 71771402}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1475545980
 MonoBehaviour:
@@ -37657,38 +37743,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 581ea2e7a3383fa4eac2d162354979b5, type: 3}
---- !u!1 &1550324084
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1550324085}
-  m_Layer: 0
-  m_Name: torres
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1550324085
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550324084}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1405825176}
-  m_Father: {fileID: 71771402}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1558610947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38253,7 +38307,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114317679573123918, guid: 41c4b1b5cf3c187459806b6e03ca36ac,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -38289,7 +38344,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -38315,7 +38370,7 @@ MonoBehaviour:
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
   FaceTarget: 1
-  AimAtTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &1675468496
 MonoBehaviour:
@@ -38344,7 +38399,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 1675468496}
+    Transitions:
+      array:
+      - Decision: {fileID: 1675468494}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 1675468495}
+    Transitions:
+      array:
+      - Decision: {fileID: 1675468494}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -38374,7 +38447,7 @@ MonoBehaviour:
   InitialHealth: 10
   MaximumHealth: 100
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 0
+  ImmuneToDamage: 1
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
@@ -40098,7 +40171,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114317679573123918, guid: 41c4b1b5cf3c187459806b6e03ca36ac,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -40134,7 +40208,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -40160,7 +40234,7 @@ MonoBehaviour:
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
   FaceTarget: 1
-  AimAtTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &1881152524
 MonoBehaviour:
@@ -40189,7 +40263,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 1881152524}
+    Transitions:
+      array:
+      - Decision: {fileID: 1881152522}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 1881152523}
+    Transitions:
+      array:
+      - Decision: {fileID: 1881152522}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -40219,7 +40311,7 @@ MonoBehaviour:
   InitialHealth: 10
   MaximumHealth: 100
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 0
+  ImmuneToDamage: 1
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
@@ -41183,7 +41275,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 114317679573123918, guid: 41c4b1b5cf3c187459806b6e03ca36ac,
+    type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
   WeaponAttachment: {fileID: 0}
@@ -41219,7 +41312,7 @@ MonoBehaviour:
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   ObstacleDetection: 1
   ObstacleMask:
     serializedVersion: 2
@@ -41245,7 +41338,7 @@ MonoBehaviour:
   TargetHandleWeaponAbility: {fileID: 0}
   AimOrigin: 0
   FaceTarget: 1
-  AimAtTarget: 0
+  AimAtTarget: 1
   OnlyAimWhenInState: 0
 --- !u!114 &1951832311
 MonoBehaviour:
@@ -41274,7 +41367,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 0}
-  States: []
+  States:
+  - StateName: wait
+    Actions:
+      array:
+      - {fileID: 1951832311}
+    Transitions:
+      array:
+      - Decision: {fileID: 1951832309}
+        TrueState: shoot
+        FalseState: 
+  - StateName: shoot
+    Actions:
+      array:
+      - {fileID: 1951832310}
+    Transitions:
+      array:
+      - Decision: {fileID: 1951832309}
+        TrueState: 
+        FalseState: wait
   TimeInThisState: 0
   Target: {fileID: 0}
   _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
@@ -41304,7 +41415,7 @@ MonoBehaviour:
   InitialHealth: 10
   MaximumHealth: 100
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 0
+  ImmuneToDamage: 1
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
@@ -42908,7 +43019,7 @@ Transform:
   m_Children:
   - {fileID: 439215040}
   m_Father: {fileID: 71771402}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2131483204 stripped
 Transform:
