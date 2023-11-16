@@ -2730,9 +2730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '000
-
-'
+  m_text: 260
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4774,15 +4772,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-  - tiempoSalida: 60
+  - tiempoSalida: 70
     cantidad: 6
     prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
     ruta: {fileID: 1405677700}
-  - tiempoSalida: 60
+  - tiempoSalida: 70
     cantidad: 1
     prefab: {fileID: 1790328835693532, guid: 7c5dd6df2564cc3429545538ad01ac89, type: 3}
     ruta: {fileID: 1405677700}
-  tiempo_entre_olas: 0
+  tiempo_entre_olas: 15
   PuedeAgregarButton: 0
 --- !u!1 &439702124
 GameObject:
@@ -6173,7 +6171,7 @@ MonoBehaviour:
     cantidad: 3
     prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
     ruta: {fileID: 1405677700}
-  tiempo_entre_olas: 0
+  tiempo_entre_olas: 15
   PuedeAgregarButton: 0
 --- !u!1 &592606007
 GameObject:
@@ -8871,11 +8869,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-  - tiempoSalida: 20
+  - tiempoSalida: 30
     cantidad: 4
     prefab: {fileID: 1790328835693532, guid: 7c5dd6df2564cc3429545538ad01ac89, type: 3}
     ruta: {fileID: 1405677700}
-  tiempo_entre_olas: 0
+  tiempo_entre_olas: 15
   PuedeAgregarButton: 0
 --- !u!4 &776551409 stripped
 Transform:
@@ -12744,11 +12742,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-  - tiempoSalida: 40
+  - tiempoSalida: 60
     cantidad: 5
     prefab: {fileID: 1790328835693532, guid: 8336cc0cf1b7b654990d47bf6c37779d, type: 3}
     ruta: {fileID: 1405677700}
-  tiempo_entre_olas: 0
+  tiempo_entre_olas: 15
   PuedeAgregarButton: 0
 --- !u!1001 &1271070539
 PrefabInstance:
@@ -17526,7 +17524,7 @@ MonoBehaviour:
       - Decision: {fileID: 1668642435}
         TrueState: shoot
         FalseState: 
-  - StateName: Shoot
+  - StateName: shoot
     Actions:
       array:
       - {fileID: 1668642436}
@@ -18759,7 +18757,7 @@ MonoBehaviour:
   - StateName: shoot
     Actions:
       array:
-      - {fileID: 1785766221}
+      - {fileID: 1785766220}
     Transitions:
       array:
       - Decision: {fileID: 1785766219}
