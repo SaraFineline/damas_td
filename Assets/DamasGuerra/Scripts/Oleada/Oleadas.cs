@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.Tools; 
 
 public class Oleadas : MonoBehaviour
 {
     [SerializeField]
     private List<Ola> olas;
-    private int ola_actual;
+    private int olaActual;
     [SerializeField]
     private GameObject contenedor_grupos;
     public static Oleadas Instance { get; private set; }
     public GameObject ContenedorGrupos { get => contenedor_grupos; set => contenedor_grupos = value; }
-    public int OlaActual { get => ola_actual; set => ola_actual = value; }
+    public int OlaActual { get => olaActual; set => olaActual = value; }
+
     public int CantidadOlas()
     {
         return olas.Count;

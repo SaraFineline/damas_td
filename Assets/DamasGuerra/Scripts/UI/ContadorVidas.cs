@@ -21,7 +21,7 @@ public class ContadorVidas : MonoBehaviour
     //mayor que 0 sigue contando vidas sino, se acaba el juego
     void Update()
     {
-        if (GameManager.Instance.CurrentLives <0 )
+        if (GameManager.Instance.CurrentLives > 0 )
         {
             contador.SetText(GameManager.Instance.CurrentLives.ToString());
         }
@@ -32,4 +32,4 @@ public class ContadorVidas : MonoBehaviour
         }
         
     }
-}
+}   

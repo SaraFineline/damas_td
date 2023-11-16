@@ -6749,7 +6749,7 @@ MonoBehaviour:
   AutomaticallyUnparentOnAwake: 1
   TargetFrameRate: 300
   MaximumLives: 0
-  CurrentLives: 0
+  CurrentLives: 20
   GameOverScene: 
   Points: 0
   PauseGameWhenInventoryOpens: 1
@@ -8689,9 +8689,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 761381805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d815326059ba2a4d8399fda0a787fb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e8e64845ed1c4c4bafa63d21f7fbacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texto: {fileID: 1564030530}
 --- !u!1 &765994733
 GameObject:
   m_ObjectHideFlags: 0
@@ -11680,7 +11681,7 @@ GameObject:
   - component: {fileID: 1140148019}
   - component: {fileID: 1140148021}
   - component: {fileID: 1140148020}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16769,7 +16770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e67178ee4220d45998a68939692391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contador: {fileID: 0}
+  contador: {fileID: 1140148020}
 --- !u!4 &1570746998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4798570233257244, guid: 581ea2e7a3383fa4eac2d162354979b5,

@@ -1,31 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; 
+using TMPro;
+using MoreMountains.Tools;
 
 public class ContadorOleadas : MonoBehaviour, MMEventListener<MMGameEvent>
 {
     [SerializeField]
-    private TMP_Text text; 
-    //si se produce el evento de la nueva ola 
+    private TMP_Text texto;
+
     public void OnMMEvent(MMGameEvent eventType)
     {
-        if (eventType.EventName=="NuevaOla")
+        if (eventType.EventName == "NuevaOla")
         {
-            int olaActual = Oleadas.Instance.OlaActual; 
-            int cantidadOlas = Oleadas.Instance.CantidadOlas();
-
-            texto.text = "Ola" + ola_actual + "/" + cantidad_olas; 
+            int ola_actual = Oleadas.Instance.OlaActual;
+            int cantidad_olas = Oleadas.Instance.CantidadOlas();
+            texto.text = "Ola" + ola_actual + "/" + cantidad_olas;
         }
     }
 
-    void OnEnable ()
+    void OnEnable()
     {
-        this.EventStartListening<MMGameEvent>();
+        this.MMEventStartListening<MMGameEvent>();
+    }
+    void OnDisable()
+    {
+        this.MMEventStopListening<MMGameEvent>();
     }
 
-    void onDisable () 
-    {
-        this.EventStoptListening<MMGameEvent>();
-    }
+
+
 }
