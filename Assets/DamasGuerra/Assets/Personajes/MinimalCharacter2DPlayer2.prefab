@@ -697,7 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitializationMode: 0
   Label: 
-  vidasADescontar: 0
+  vidasADescontar: 1
 --- !u!114 &-2320187412311088585
 MonoBehaviour:
   m_ObjectHideFlags: 0
